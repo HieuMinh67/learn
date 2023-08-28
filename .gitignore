@@ -1,0 +1,10 @@
+.terraform.*
+.terraform/
+terraform.tfstate
+terraform.tfstate*
+
+venv
+.idea/
+
+.DS_Store
+.envrc
