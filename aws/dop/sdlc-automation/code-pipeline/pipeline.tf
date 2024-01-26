@@ -1,6 +1,6 @@
 locals {
   name          = "DemoPipeline"
-  instance_name = "DeploymentGroup"
+  instance_name = "DeployInstance"
 }
 
 resource "aws_s3_bucket" "repo_as_bucket" {
@@ -52,7 +52,7 @@ data "aws_ami" "amazon_linux" {
   most_recent = true
 }
 
-resource "aws_instance" "deployment_group" {
+resource "aws_instance" "deploy_instance" {
   ami           = data.aws_ami.amazon_linux.id
   instance_type = "t2.micro"
 
